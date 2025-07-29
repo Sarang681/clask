@@ -1,0 +1,9 @@
+[package]
+name = "clask"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = "4.5.41"
+derive = "1.0.0"
+features = "0.10.0"
