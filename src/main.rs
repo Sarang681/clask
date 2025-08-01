@@ -1,8 +1,13 @@
+use std::process::exit;
+
 use clap::Parser;
+use clask::{Command, run};
 
 fn main() {
-    println!("Hello, world!");
-}
+    let args = Command::parse();
 
-#[derive(Debug, Parser)]
-struct Args {}
+    if let Err(_) = run(args) {
+        println!("Error while performing operation");
+        exit(1);
+    }
+}
